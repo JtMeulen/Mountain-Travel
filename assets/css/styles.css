@@ -1,0 +1,240 @@
+/* General styles*/
+body {
+	margin: 0;
+	font-family: Play;
+}
+
+h1, p{
+	text-align: center;
+}
+
+hr {
+	border: none;
+	background-color: #576c8e;
+	height: 3px;
+	width: 300px;
+	margin-bottom: 50px;
+}
+
+a {
+	display: inline-block;
+	transition: all 0.1s linear;
+}
+
+a:hover:not(.action-button) {
+	color: #bec5d1;
+}
+
+section {
+	padding: 75px 0;
+}
+
+section:nth-of-type(even){
+	background-color: #f2f2f2;
+}
+
+/* Navbar styles */
+.navbar h2, .nav a {
+	text-decoration: none;
+	opacity: 0;
+	margin: 0;
+	color: white;
+	animation: 2s linear 0.3s 1 headerFadeIn forwards;
+}
+
+.nav a {
+	padding-left: 15px;
+}
+
+.navbar {	
+	margin: 0 40px;
+	padding: 20px;
+	position: relative;
+	display: flex;	
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Landing page and hero styles*/
+header {	
+	top: 0;
+	left: 0;
+	background-color: #98bdf9;
+	background-image: url(../img/main.jpg);
+	background-size: cover;
+	height: 100vh;
+}
+
+.hero {
+	animation: 1s ease-out 0.3s 1 heroJumpUp forwards;
+	opacity: 0;
+	padding-top: 25vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.hero h1, h3 {
+	text-shadow: 1px 1px 6px black;
+	color: white;
+	text-align: center;
+}
+
+.hero h1 {
+	font-size: 50px;
+}
+
+.hero h3 {
+	font-size: 30px;
+	padding-bottom: 25px;
+}
+
+.action-button {
+	font-size: 25px;
+	width: 200px;
+	border-radius: 10px;
+	padding: 20px 20px;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	background-color: #0a4096;
+	transition: all 0.1s linear;
+}
+
+.action-button:hover {
+	background-color: #022d72;
+	cursor: pointer;
+	transform: scale(0.96, 0.96);
+}
+
+/* Demo page styles*/
+.photo-section {
+	margin: 20px auto;
+	height: 800px;
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: space-between;
+}
+
+.photo {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 10px 30px;
+}
+
+.photo:nth-of-type(1){background-image: url(../img/mountain1.jpg); flex: 1 1 300px;}
+.photo:nth-of-type(2){background-image: url(../img/mountain2.jpg); flex: 3 3 600px;}
+.photo:nth-of-type(3){background-image: url(../img/mountain3.jpg); flex: 3 3 600px;}
+.photo:nth-of-type(4){background-image: url(../img/mountain4.jpg); flex: 1 1 300px;}
+
+/* Features page styles*/
+.trip-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 80%;
+	margin: 20px auto;
+}
+
+.trip {
+	text-align: center;
+	padding-top: 25px;
+	flex-basis: 250px;
+}
+
+.trip h4 {
+	font-size: 1.5em;
+	margin: 5px 0;
+}
+
+.trip .fa {
+	color: #add4f4;
+	font-size: 50px;
+	padding-bottom: 10px;
+}
+
+/*Testimonail page styles*/
+.review-section {
+	margin: 20px auto;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.review {
+	width: 70%;
+}
+
+/* Contact page styles*/
+.subscribe {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	height: 39px;
+	align-items: center;
+}
+
+.subscribe input {
+	flex-basis: 400px;
+	margin: 10px 25px;
+	height: 30px;
+	padding-left: 5px;
+}
+
+.subscribe .action-button {
+	font-size: inherit;
+	width: 170px;
+	padding: 10px 20px;
+}
+
+
+/* Footer styles*/
+footer {
+	padding: 10px;
+	background-color: #576c8e;
+}
+
+footer p {
+	color: white;
+	margin: 0;
+	padding: 5px;
+}
+
+footer p a {
+	text-decoration: none;
+	color: #e0e0e0;
+}
+
+footer .icons {
+	font-size: 30px;
+	margin: 5px;
+	letter-spacing: 5px;
+}
+
+/* Keyframe animations*/
+@keyframes heroJumpUp {
+	0% {transform: translateY(50px); opacity: 0;}
+	25% {opacity: 0.2}
+	100% {transform: translateY(0px); opacity: 1;}
+}
+
+@keyframes headerFadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 0.8;}	
+}
+
+/* Screen breakpoint styles*/
+@media screen and (max-width: 1268px) {
+	.trip {flex-basis: 350px;}
+
+@media screen and (max-width: 800px) {
+	.navbar {flex-direction: column; margin: 0;}
+	.hero {padding-top: 0;}
+	.hero h1 {font-size: 35px;} 
+	.hero h3 {font-size: 20px;}
+	.nav a {padding-left: 2px;}
+	.action-button {font-size: 20px; width: 50%;}
